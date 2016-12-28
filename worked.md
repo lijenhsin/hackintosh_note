@@ -25,6 +25,9 @@ Kingstion DDR3 1600 16GB x 2
 
 
 ##Instruction
+ - Follow the instructions from [tonymacx86] (https://www.tonymacx86.com/threads/unibeast-install-macos-sierra-on-any-supported-intel-based-pc.200564/)
+ - Create OSX Sierra bootable USB (Unibeast) with Clover in UEFI partition
+ - Use Multibeast to configure
 ###boot 
 clover latest
 ###video 
@@ -32,10 +35,10 @@ EVGA GTX 770 (nvidia webdriver)
 ###sound 
 Multibeast 887/889 current
 ###network 
-(RTL8169 PCI card) 
+On board ethernet card showed NO LUCK so I used a PCI Intel LAN card (RTL8169 PCI card)
+and used AppleRTL8169Ethernet.kext. Remember to execute the following command to make it work:
 
-``
-sudo touch /System/Library/Extensions``
-``sudo kextcache -update-volume /``
+  sudo touch /System/Library/Extensions
+  sudo kextcache -update-volume /
 
- 
+ That's it! Wish you good luck and may the force be with you!
